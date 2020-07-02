@@ -2,12 +2,13 @@ import React from 'react';
 
 import './ProductList.css'
 
-const ProductList = () => {
+const ProductList = props => {
+
     return (
         <ul className="product-list">
-            <li>Book 1</li>
-            <li>Book 2</li>
-            <li>Book 3</li>
+            {
+                props.items.map((item) => (<li key={item.id}> {item.title} </li>))
+            }
         </ul>
     );
 }
