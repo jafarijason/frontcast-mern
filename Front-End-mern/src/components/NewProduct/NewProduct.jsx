@@ -10,8 +10,8 @@ const NewProduct = (props) => {
             id: Math.floor(Math.random() * 100000),
             title: userInput
         }
-        props.onAddProduct(newProduct)
         setUserInput('')
+        props.onAddProduct(newProduct)        
     }
 
     const textChaneHandler = event => {
