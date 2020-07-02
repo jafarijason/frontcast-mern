@@ -4,10 +4,14 @@ import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-d
 import './App.css';
 import Users from './user/pages/Users';
 import NewPost from './posts/pages/NewPost';
+import MainNavigation from './shared/components/Navigation/MainNavigation';
+
+
 
 function App() {
   return (
     <Router >
+      <MainNavigation />
       <Switch>
         <Route path="/" exact >
           <Users />
